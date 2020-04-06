@@ -1,0 +1,24 @@
+{
+  "name": "alef",
+  "version": "1.0.0",
+  "description": "",
+  "files": [
+    "lib/*"
+  ],
+  "main": "lib/index.js",
+  "babel": {
+    "plugins": ["@babel/plugin-transform-arrow-functions"]
+  },
+  "scripts": {
+    "prepare": "npx babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3"
+  }
+}
