@@ -1,13 +1,15 @@
 {
   "name": "alef",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "files": [
     "lib/*"
   ],
   "main": "lib/index.js",
   "babel": {
-    "plugins": ["@babel/plugin-transform-arrow-functions"]
+    "plugins": [
+      "@babel/plugin-transform-arrow-functions"
+    ]
   },
   "scripts": {
     "prepare": "npx babel src --out-dir lib",
