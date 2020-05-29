@@ -1,8 +1,8 @@
 {
-  "name": "bet",
-  "version": "1.0.1",
+  "name": "apis",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Pokemon.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
