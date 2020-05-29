@@ -1,7 +1,9 @@
+/**
+ * @jest-environment node
+ */
 const { pactWith } = require("jest-pact")
 const { Matchers } = require("@pact-foundation/pact")
 const Pokemon = require('./Pokemon')
-
 
 pactWith({ consumer: "apis", provider: "PokeAPI" }, provider => {
     let pokemonAPI
