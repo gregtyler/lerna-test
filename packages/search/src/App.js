@@ -5,11 +5,13 @@ import components from 'components';
 
 const { Button } = components;
 
+const pokemonAPI = new Pokemon();
+
 function App() {
   const [details, setDetails] = useState(null);
 
   const fetchPokemon = () => {
-    Pokemon
+    pokemonAPI
       .get('ditto')
       .then(data => {
           setDetails(data);
@@ -24,7 +26,7 @@ function App() {
         details
           ? <div>
               <h1>{ details.name }</h1>
-              <img src={ details.sprites.front_default } />
+              <img src={ details.sprites.front_default } alt={ details.name } />
           </div>
           : <div>Press button to load data</div>
       }
