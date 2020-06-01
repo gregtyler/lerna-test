@@ -45,5 +45,10 @@ jobs:
         node-version: '12.x'
     - name: Install dependencies
       run: yarn install
-    - name: Build GitHub pages
-      run: yarn run gh-pages
+    - name: Build storybook
+      run: yarn run build
+    - name: Publish GitHub pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./gh-build
