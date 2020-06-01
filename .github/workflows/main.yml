@@ -30,4 +30,4 @@ jobs:
     - name: Install dependencies
       run: yarn lerna bootstrap
     - name: Run tests
-      run: yarn run test
+      run: yarn lerna run test
