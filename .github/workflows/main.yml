@@ -46,7 +46,7 @@ jobs:
     - name: Install dependencies
       run: yarn install
     - name: Build storybook
-      run: yarn run build
+      run: NODE_ENV=production yarn run build
     - name: Publish GitHub pages
       uses: peaceiris/actions-gh-pages@v3
       with:
