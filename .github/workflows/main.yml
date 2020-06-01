@@ -20,14 +20,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
-
-    # Install dependencies
-    - uses: m19c/action-lerna@1.0.0
+    - uses: actions/checkout@v2  
+    - name: Use Node.js
+      uses: actions/setup-node@v1
       with:
-        args: prepare
-        
-    # Run tests
-    - uses: m19c/action-lerna@1.0.0
-      with:
-        args: test
+        node-version: '12.x'
+    - name: Install lerna
+      run: yarn install
+    - name: Install dependencies
+      run: yarn lerna bootstrap
+    - name: Run tests
+      run: yarn run test
